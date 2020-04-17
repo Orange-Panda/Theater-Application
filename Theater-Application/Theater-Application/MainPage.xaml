@@ -6,11 +6,59 @@
              mc:Ignorable="d"
              x:Class="Theater_Application.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowSpacing="5" ColumnSpacing="5" BackgroundColor="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
+                <Image Source="C:\Users\fl28c\Documents\GitHub\Theater-Application\Theater-Application\Theater-Application\Images\SonicTheHedgehog_Teaser2019.jpg" 
+               Grid.Column="0" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </Image.GestureRecognizers>
+            </Image>
+            <Image Source="C:\Users\fl28c\Documents\GitHub\Theater-Application\Theater-Application\Theater-Application\Images\BDPRY_VERT_MAIN_DOM_2657x4096_master.jpg"
+                  Grid.Column="1" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill">
+
+            </Image>
+                <Image Source="C:\Users\fl28c\Documents\GitHub\Theater-Application\Theater-Application\Theater-Application\Images\BehindYou_Theatrical.jpg"
+                  Grid.Column="0" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill">
+
+            </Image>
+                <Image Source="C:\Users\fl28c\Documents\GitHub\Theater-Application\Theater-Application\Theater-Application\Images\dolittle-posterart.jpg"
+                  Grid.Column="1" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill">
+
+            </Image>
+
+                <Image Source="C:\Users\fl28c\Documents\GitHub\Theater-Application\Theater-Application\Theater-Application\Images\JM2_OnLine_1080x1350_TSR_HERO_RD3DDCIMX_01.jpg"
+                  Grid.Column="0" Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill" >
+
+                </Image>
+                <Image Source="C:\Users\fl28c\Documents\GitHub\Theater-Application\Theater-Application\Theater-Application\Images\StarWars95dae8bed21644.jpg"
+                  Grid.Column="1" Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill">
+
+                </Image>
+
+                <Image Source="C:\Users\fl28c\Documents\GitHub\Theater-Application\Theater-Application\Theater-Application\Images\TheCallOfTheWild2020.jpg"
+                  Grid.Column="0" Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill">
+
+            </Image>
+                <Image Source="C:\Users\fl28c\Documents\GitHub\Theater-Application\Theater-Application\Theater-Application\Images\titanic.jpg"
+                  Grid.Column="1" Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill">
+
+                </Image>
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>

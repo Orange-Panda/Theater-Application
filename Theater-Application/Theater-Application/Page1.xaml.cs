@@ -11,17 +11,11 @@ namespace Theater_Application
 	// Learn more about making custom code visible in the Xamarin.Forms previewer
 	// by visiting https://aka.ms/xamarinforms-previewer
 	[DesignTimeVisible(false)]
-	public partial class MainPage : ContentPage
-	{
-		public MainPage()
-		{
-			InitializeComponent();
-			
-		}
-		private async void TapGestureRecognizer_Tapped_1(Object sender, EventArgs e)
-		{
-			await Navigation.PushAsync(new Page1());
-		}
-
-	}
+    public partial class Page1 : ContentPage
+    {
+        public Page1()
+        {
+            InitializeComponent();
+        }
+    }
 }
