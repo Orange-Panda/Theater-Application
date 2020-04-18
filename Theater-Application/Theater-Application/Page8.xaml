@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Theater_Application.Page1"
+             x:Class="Theater_Application.Page8"
              BackgroundColor="black">
     <ContentPage.Content>
 
