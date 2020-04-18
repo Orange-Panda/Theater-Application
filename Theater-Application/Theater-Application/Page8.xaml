@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Theater_Application.Page1"
+             BackgroundColor="black">
+    <ContentPage.Content>
+
+        <Grid RowSpacing="10" ColumnSpacing="5" BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+            <Image Source="C:\Users\fl28c\Documents\GitHub\Theater-Application\Theater-Application\Theater-Application.Android\Resources\drawable\titanic.jpg" 
+               Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" Grid.RowSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill">
+
+            </Image>
+            <Frame Grid.Row="3" Grid.Column="1" HeightRequest="40" WidthRequest="40" CornerRadius="20" HorizontalOptions="Start" VerticalOptions="Start" Margin="0" Padding="0" BackgroundColor="Maroon">
+                <Label Text="PG-13" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            </Frame>
+            <Frame Grid.Row="3" Grid.Column="2" HeightRequest="40" WidthRequest="40" CornerRadius="20" HorizontalOptions="Start" VerticalOptions="Start" Margin="0" Padding="0" BackgroundColor="Maroon">
+                <Label FontSize="9" Text="194 Min" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            </Frame>
+            <Frame Grid.Row="3" Grid.Column="3" HeightRequest="40" WidthRequest="40" CornerRadius="20" HorizontalOptions="Start" VerticalOptions="Start" Margin="0" Padding="0" BackgroundColor="Maroon">
+                <Label FontSize="7" Text="Romance" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            </Frame>
+            <Frame Grid.Row="3" Grid.Column="4" HeightRequest="40" WidthRequest="40" CornerRadius="20" HorizontalOptions="Start" VerticalOptions="Start" Margin="0" Padding="0" BackgroundColor="Maroon">
+                <Label FontSize="11" Text="6.9/10" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            </Frame>
+
+
+            <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7" Text="TITANIC (1997)" FontSize="25" 
+                           HorizontalOptions="Center" VerticalOptions="Center" TextColor="Maroon"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+            <StackLayout Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="7" Spacing="0">
+
+
+                <Label  Margin="0"   FontSize="12" Text="Story:" TextColor="Maroon"  />
+
+                <Label HorizontalOptions="Start" FontSize="12" Text="A woman (Kate Winslet) falls for an artist (Leonardo DiCaprio) aboard the ill-fated ship." TextColor="White" />
+
+                <Label     FontSize="12" Text="Directors:" TextColor="Maroon" />
+
+                <Label  FontSize="12" Text="James Cameron" TextColor="White" />
+
+                <Label    FontSize="12" Text="Writers:" TextColor="Maroon" />
+
+                <Label  Text="James Cameron" TextColor="White" />
+
+                <Label   FontSize="12" Text="Cast:" TextColor="Maroon" />
+
+                <Label  FontSize="12" Text="Leonardo DiCaprio, Kate Winslet, Billy Zane..." TextColor="White" />
+
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Grid.ColumnSpan="7" Grid.Row="7" VerticalOptions="Center">
+                <StackLayout Orientation="Vertical"  HorizontalOptions="StartAndExpand">
+                    <Button Text="Watch Trailer" TextColor="Red"   BorderColor="Red" BackgroundColor="Black" BorderWidth="1" CornerRadius="10" VerticalOptions="Fill" MinimumWidthRequest="-1" IsTabStop="False" HorizontalOptions="Fill">
+                        <Button.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="WatchTrailer"/>
+                        </Button.GestureRecognizers>
+                    </Button>
+                </StackLayout>
+                <StackLayout Orientation="Vertical"  HorizontalOptions="EndAndExpand">
+                    <Button Text="Select Seating" TextColor="Red"  BorderColor="Red" BackgroundColor="Black" BorderWidth="1" CornerRadius="10">
+                        <Button.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="SelectSeating"/>
+                        </Button.GestureRecognizers>
+                    </Button>
+                </StackLayout>
+            </StackLayout>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

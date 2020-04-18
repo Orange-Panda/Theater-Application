@@ -23,5 +23,34 @@ namespace Theater_Application
 			await Navigation.PushAsync(new Page1());
 		}
 
+		private async void TapGestureRecognizer_Tapped_2(Object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new Page2());
+		}
+		private async void TapGestureRecognizer_Tapped_3(Object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new Page3());
+		}
+		private async void TapGestureRecognizer_Tapped_4(Object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new Page4());
+		}
+		private async void TapGestureRecognizer_Tapped_5(Object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new Page5());
+		}
+		private async void TapGestureRecognizer_Tapped_6(Object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new Page6());
+		}
+		private async void TapGestureRecognizer_Tapped_7(Object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new Page7());
+		}
+		private async void TapGestureRecognizer_Tapped_8(Object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new Page8());
+		}
+
 	}
 }

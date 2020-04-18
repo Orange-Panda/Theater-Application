@@ -6,21 +6,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Essentials;
+
 namespace Theater_Application
 {
-	// Learn more about making custom code visible in the Xamarin.Forms previewer
-	// by visiting https://aka.ms/xamarinforms-previewer
-	[DesignTimeVisible(false)]
-    public partial class Page1 : ContentPage
+    // Learn more about making custom code visible in the Xamarin.Forms previewer
+    // by visiting https://aka.ms/xamarinforms-previewer
+    [DesignTimeVisible(false)]
+    public partial class Page7 : ContentPage
+{
+    public Page7()
     {
-        public Page1()
-        {
-            
-        }
-
+        
+    }
         private async void WatchTrailer(Object sender, EventArgs e)
         {
-           await Browser.OpenAsync("https://www.youtube.com/watch?v=szby7ZHLnkA", BrowserLaunchMode.SystemPreferred);
+            await Browser.OpenAsync("https://www.youtube.com/watch?v=5P8R2zAhEwg", BrowserLaunchMode.SystemPreferred);
         }
 
         /*private async void SelectSeating(Object sender, EventArgs e)

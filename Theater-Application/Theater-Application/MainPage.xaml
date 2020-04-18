@@ -29,33 +29,47 @@
             </Image>
             <Image Source="C:\Users\fl28c\Documents\GitHub\Theater-Application\Theater-Application\Theater-Application\Images\BDPRY_VERT_MAIN_DOM_2657x4096_master.jpg"
                   Grid.Column="1" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill">
-
-            </Image>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+                    </Image.GestureRecognizers>
+                </Image>
                 <Image Source="C:\Users\fl28c\Documents\GitHub\Theater-Application\Theater-Application\Theater-Application\Images\BehindYou_Theatrical.jpg"
                   Grid.Column="0" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill">
-
-            </Image>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                    </Image.GestureRecognizers>
+                </Image>
                 <Image Source="C:\Users\fl28c\Documents\GitHub\Theater-Application\Theater-Application\Theater-Application\Images\dolittle-posterart.jpg"
                   Grid.Column="1" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill">
-
-            </Image>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4"/>
+                    </Image.GestureRecognizers>
+                </Image>
 
                 <Image Source="C:\Users\fl28c\Documents\GitHub\Theater-Application\Theater-Application\Theater-Application\Images\JM2_OnLine_1080x1350_TSR_HERO_RD3DDCIMX_01.jpg"
                   Grid.Column="0" Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill" >
-
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_5"/>
+                    </Image.GestureRecognizers>
                 </Image>
                 <Image Source="C:\Users\fl28c\Documents\GitHub\Theater-Application\Theater-Application\Theater-Application\Images\StarWars95dae8bed21644.jpg"
                   Grid.Column="1" Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill">
-
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_7"/>
+                    </Image.GestureRecognizers>
                 </Image>
 
                 <Image Source="C:\Users\fl28c\Documents\GitHub\Theater-Application\Theater-Application\Theater-Application\Images\TheCallOfTheWild2020.jpg"
                   Grid.Column="0" Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill">
-
-            </Image>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_8"/>
+                    </Image.GestureRecognizers>
+                </Image>
                 <Image Source="C:\Users\fl28c\Documents\GitHub\Theater-Application\Theater-Application\Theater-Application\Images\titanic.jpg"
                   Grid.Column="1" Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill">
-
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_7"/>
+                    </Image.GestureRecognizers>
                 </Image>
 
             </Grid>
