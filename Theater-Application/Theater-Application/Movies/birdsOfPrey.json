@@ -1,13 +1,14 @@
 {
-    "videoUrl":"https://www.youtube.com/watch?v=kGM4uYZzfu0",
-    "imageName":"BirdsOfPrey.jpg",
-    "title":"Birds of Prey",
-    "description":"Harley Quinn, Huntress and Black Canary battle crime kingpin Black Mask in Gotham City.",
-    "movieLength":109.0,
-    "contentRating":3,
-    "cast":"Margot Robbie, Rosie Perez, Mary Elizabeth Winstead",
-    "directors":"Cathy Yan",
-    "writers":"Christina Hodson, Paul Dini",
-    "genre": "Action, Adventure",
-    "rating":7.8
+  "videoUrl": "https://www.youtube.com/watch?v=kGM4uYZzfu0",
+  "imageName": "BirdsOfPrey.jpg",
+  "backgroundName": "BirdsOfPreyBG.jpg",
+  "title": "Birds of Prey",
+  "description": "Harley Quinn, Huntress and Black Canary battle crime kingpin Black Mask in Gotham City.",
+  "movieLength": 109.0,
+  "contentRating": 3,
+  "cast": "Margot Robbie, Rosie Perez, Mary Elizabeth Winstead",
+  "directors": "Cathy Yan",
+  "writers": "Christina Hodson, Paul Dini",
+  "genre": "Action, Adventure",
+  "rating": 7.8
 }

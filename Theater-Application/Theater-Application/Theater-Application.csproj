@@ -12,13 +12,22 @@
 
   <ItemGroup>
     <None Remove="Images\BehindYou.jpg" />
+    <None Remove="Images\BehindYouBG.jpg" />
     <None Remove="Images\BirdsOfPrey.jpg" />
+    <None Remove="Images\BirdsOfPreyBG.jpg" />
     <None Remove="Images\CallOfTheWild.jpg" />
+    <None Remove="Images\CallOfTheWildBG.jpg" />
     <None Remove="Images\Dolittle.jpg" />
+    <None Remove="Images\DolittleBG.jpg" />
     <None Remove="Images\Jumanji.jpg" />
+    <None Remove="Images\JumanjiBG.jpg" />
     <None Remove="Images\Sonic.jpg" />
+    <None Remove="Images\SonicBG.jpg" />
     <None Remove="Images\StarWars9.jpg" />
+    <None Remove="Images\StarWars9BG.jpg" />
+    <None Remove="Images\TheaterBG.jpg" />
     <None Remove="Images\titanic.jpg" />
+    <None Remove="Images\TitanicBG.jpg" />
     <None Remove="Movies\behindYou.json" />
     <None Remove="Movies\birdsOfPrey.json" />
     <None Remove="Movies\dolittle.json" />
@@ -30,30 +39,39 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Images\BehindYouBG.jpg" />
     <EmbeddedResource Include="Images\BirdsOfPrey.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Images\BehindYou.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Images\BirdsOfPreyBG.jpg" />
+    <EmbeddedResource Include="Images\CallOfTheWildBG.jpg" />
     <EmbeddedResource Include="Images\Dolittle.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Images\DolittleBG.jpg" />
     <EmbeddedResource Include="Images\Jumanji.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Images\JumanjiBG.jpg" />
     <EmbeddedResource Include="Images\Sonic.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Images\SonicBG.jpg" />
     <EmbeddedResource Include="Images\StarWars9.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Images\CallOfTheWild.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Images\StarWars9BG.jpg" />
+    <EmbeddedResource Include="Images\TheaterBG.jpg" />
     <EmbeddedResource Include="Images\Titanic.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Images\TitanicBG.jpg" />
     <EmbeddedResource Include="Movies\behindYou.json" />
     <EmbeddedResource Include="Movies\birdsOfPrey.json" />
     <EmbeddedResource Include="Movies\dolittle.json" />

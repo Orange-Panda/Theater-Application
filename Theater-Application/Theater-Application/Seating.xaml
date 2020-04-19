@@ -5,9 +5,39 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Theater_Application.Seating">
+	<Grid BackgroundColor="Black">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		
+		<!--Title-->
+		<StackLayout Orientation="Vertical" Grid.Row="1" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand" Padding="20">
+			<Label Style="{StaticResource Seat Text}" Text="Seat Availability" FontSize="Title" FontAttributes="Bold"/>
+			<Label Style="{StaticResource Seat Text}" Text="Today's Date" x:Name="Date" FontSize="Subtitle"/>
+			<Frame HeightRequest="1" BackgroundColor="Firebrick" HorizontalOptions="Start" Padding="0" WidthRequest="250"/>
+		</StackLayout>
 
-    <ScrollView>
-        <Grid x:Name="gridLayout">
-        </Grid>
-    </ScrollView>
+		<!--Time Selection-->
+		<StackLayout Grid.Row="2" Orientation="Horizontal"  HorizontalOptions="Center" Spacing="10">
+			
+		</StackLayout>
+		
+		<!--Key-->
+		<StackLayout Grid.Row="3" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Padding="20" Spacing="10">
+			<Frame Padding="0" WidthRequest="40" HeightRequest="24"/>
+			<Label Style="{StaticResource Seat Text}" Text="Available" VerticalTextAlignment="Center"/>
+			<Frame BackgroundColor="Gray" Padding="0" WidthRequest="40" HeightRequest="24"/>
+			<Label Style="{StaticResource Seat Text}" Text="Reserved" VerticalTextAlignment="Center"/>
+			<Frame BackgroundColor="#FF202020" Padding="0" WidthRequest="40" HeightRequest="24"/>
+			<Label Style="{StaticResource Seat Text}" Text="Unavailable" VerticalTextAlignment="Center"/>
+		</StackLayout>
+		
+		<!---Seat selection-->
+		<StackLayout Grid.Row="4" x:Name="HStack" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Spacing="12" Padding="20"/>
+	</Grid>
 </ContentPage>

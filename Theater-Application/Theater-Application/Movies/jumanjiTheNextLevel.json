@@ -1,13 +1,14 @@
 {
-    "videoUrl":"https://www.youtube.com/watch?v=rBxcF-r9Ibs",
-    "imageName":"Jumanji.jpg",
-    "title":"Jumanjia The Next Level",
-    "description":"In Jumanji: The Next Level, the gang is back but the game has changed. As they return to Jumanji to rescue one of their own, they discover that nothing is as they expect.",
-    "movieLength":114.0,
-    "contentRating":2,
-    "cast":"Dwayne Johnson, Jack Black, Kevin Hart",
-    "directors":"Jake Kasdan",
-    "writers":"Jake Kasdan, Jeff Pinkner",
-    "genre": "Action, Adventure, Comedy",
-    "rating":8.7
+  "videoUrl": "https://www.youtube.com/watch?v=rBxcF-r9Ibs",
+  "imageName": "Jumanji.jpg",
+  "backgroundName": "JumanjiBG.jpg",
+  "title": "Jumanjia The Next Level",
+  "description": "In Jumanji: The Next Level, the gang is back but the game has changed. As they return to Jumanji to rescue one of their own, they discover that nothing is as they expect.",
+  "movieLength": 114.0,
+  "contentRating": 2,
+  "cast": "Dwayne Johnson, Jack Black, Kevin Hart",
+  "directors": "Jake Kasdan",
+  "writers": "Jake Kasdan, Jeff Pinkner",
+  "genre": "Action, Adventure, Comedy",
+  "rating": 8.7
 }

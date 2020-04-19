@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Movie_Theater;
+using System;
 using System.ComponentModel;
-using System.Linq;
 using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using Movie_Theater;
 using Xamarin.Forms;
 
 namespace Theater_Application

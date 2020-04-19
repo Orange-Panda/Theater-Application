@@ -1,6 +1,7 @@
 {
-    "videoUrl":"https://www.youtube.com/watch?v=h1LG9So2ZBk",
-    "imageName":"CallOfTheWild.jpg",
+    "videoUrl":"https://www.youtube.com/watch?v=5P8R2zAhEwg",
+    "imageName": "CallOfTheWild.jpg",
+    "backgroundName":  "CallOfTheWildBG.jpg",
     "title":"The Call Of The Wild",
     "description":"A big-hearted dog finds the adventure of a lifetime in the wilds of the Alaskan Yukon in the 1890s.",
     "movieLength":100.0,

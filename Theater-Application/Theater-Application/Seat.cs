@@ -1,7 +1,12 @@
 ﻿namespace Theater_Application
 {
-    class Seat
+    public struct Seat
     {
-        //TODO: This
+        public SeatStatus seatStatus;
+    }
+
+    public enum SeatStatus
+    {
+        Available, Reserved, Purchased, Null
     }
 }

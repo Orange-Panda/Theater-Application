@@ -1,13 +1,14 @@
 {
-    "videoUrl":"https://www.youtube.com/watch?v=hej47fWFLQs",
-    "imageName":"Dolittle.jpg",
-    "title":"Dolittle",
-    "description":"When the young queen falls gravely ill, a reluctant Dolittle is forced to set sail on an epic adventure to a mythical island in search of a cure, regaining his wit and courage as he crosses old adversaries and discovers wondrous creatures.",
-    "movieLength":100.0,
-    "contentRating":1,
-    "cast":"Robert Downey Jr., Antonio Banderas, Michael Sheen",
-    "directors":"Stephen Gaghan",
-    "writers":"Stephen Gaghan",
-    "genre": "Action, Adventure, Comedy",
-    "rating":7.6
+  "videoUrl": "https://www.youtube.com/watch?v=hej47fWFLQs",
+  "imageName": "Dolittle.jpg",
+  "backgroundName": "DolittleBG.jpg",
+  "title": "Dolittle",
+  "description": "When the young queen falls gravely ill, a reluctant Dolittle is forced to set sail on an epic adventure to a mythical island in search of a cure, regaining his wit and courage as he crosses old adversaries and discovers wondrous creatures.",
+  "movieLength": 100.0,
+  "contentRating": 1,
+  "cast": "Robert Downey Jr., Antonio Banderas, Michael Sheen",
+  "directors": "Stephen Gaghan",
+  "writers": "Stephen Gaghan",
+  "genre": "Action, Adventure, Comedy",
+  "rating": 7.6
 }

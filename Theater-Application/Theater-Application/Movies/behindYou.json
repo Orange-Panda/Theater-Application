@@ -1,13 +1,14 @@
 {
-    "videoUrl":"https://www.youtube.com/watch?v=Tbhkk9Pr6Kg",
-    "imageName":"BehindYou.jpg",
-    "title":"Behind You",
-    "description":"Two young sisters find that all the mirrors in their estranged aunt's house are covered or hidden. When one of them happens upon a mirror in the basement, she unknowingly releases a malicious demon.",
-    "movieLength":86.0,
-    "contentRating":3,
-    "cast":"Addy Miller, Elizabeth Birkner, Jan Broberg",
-    "directors":"Matthew Whedon, Andrew Mecham",
-    "writers":"Andrew Mecham, Matthew Whedon",
-    "genre": "Horror",
-    "rating":5.8
+  "videoUrl": "https://www.youtube.com/watch?v=Tbhkk9Pr6Kg",
+  "imageName": "BehindYou.jpg",
+  "backgroundName": "BehindYouBG.jpg",
+  "title": "Behind You",
+  "description": "Two young sisters find that all the mirrors in their estranged aunt's house are covered or hidden. When one of them happens upon a mirror in the basement, she unknowingly releases a malicious demon.",
+  "movieLength": 86.0,
+  "contentRating": 3,
+  "cast": "Addy Miller, Elizabeth Birkner, Jan Broberg",
+  "directors": "Matthew Whedon, Andrew Mecham",
+  "writers": "Andrew Mecham, Matthew Whedon",
+  "genre": "Horror",
+  "rating": 5.8
 }

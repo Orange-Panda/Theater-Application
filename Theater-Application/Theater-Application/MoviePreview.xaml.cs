@@ -12,11 +12,15 @@ namespace Theater_Application
     [DesignTimeVisible(false)]
     public partial class MoviePreview : ContentPage
     {
+        private string trailer = "https://www.youtube.com/watch?v=LcbK__SeXy0";
+
         public MoviePreview()
         {
             InitializeComponent();
+
             Movie movie = Movies.SelectedMovie;
             PosterImage.Source = ImageSource.FromResource($"Theater-Application.Images.{movie.imageName}", typeof(EmbeddedImages).GetTypeInfo().Assembly);
+            PosterImageBG.Source = ImageSource.FromResource($"Theater-Application.Images.{movie.backgroundName}", typeof(EmbeddedImages).GetTypeInfo().Assembly);
             ContentRating.Text = movie.contentRating.ToString();
             Score.Text = movie.rating.ToString();
             Genre.Text = movie.genre;
@@ -25,12 +29,20 @@ namespace Theater_Application
             Cast.Text = movie.cast;
             Directors.Text = movie.directors;
             Writers.Text = movie.writers;
-            Title.Text = movie.title;
+            Title.Text = movie.title.ToUpper();
+            trailer = movie.videoUrl;
         }
 
-        private async void WatchTrailer(object sender, EventArgs e)
+        public async void WatchTrailer(object sender, EventArgs e)
         {
-            await Browser.OpenAsync("https://www.youtube.com/watch?v=szby7ZHLnkA", BrowserLaunchMode.SystemPreferred);
+            Console.WriteLine("Trailer");
+            await Browser.OpenAsync(trailer, BrowserLaunchMode.SystemPreferred);
+        }
+
+        public async void Seating(object sender, EventArgs e)
+        {
+            Console.WriteLine("Seating");
+            await Navigation.PushAsync(new Seating());
         }
     }
 }

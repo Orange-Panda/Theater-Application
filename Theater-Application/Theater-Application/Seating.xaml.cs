@@ -1,63 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 using Xamarin.Forms;
-using Xamarin.Essentials;
+
 namespace Theater_Application
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
     public partial class Seating : ContentPage
-{
-        private List<Seat> SeatsArrayList;
+    {
+        private const int MaxHeight = 10;
+        private const int MaxWidth = 7;
+        private Seat[,] seats = new Seat[MaxHeight, MaxWidth];
+        private Button[,] buttons = new Button[MaxHeight, MaxWidth];
 
         public Seating()
         {
             InitializeComponent();
-            SeatsArrayList = new List<Seat>();
-            for (int i = 0; i < 50; i++)
-            {
-                //SeatsArrayList.Add(new Seat { Name = "" });
-            }
 
-            gridLayout.RowDefinitions.Add(new RowDefinition());
-            gridLayout.RowDefinitions.Add(new RowDefinition());
-            gridLayout.RowDefinitions.Add(new RowDefinition());
-            gridLayout.RowDefinitions.Add(new RowDefinition());
-            gridLayout.RowDefinitions.Add(new RowDefinition());
-            gridLayout.RowDefinitions.Add(new RowDefinition());
-            gridLayout.RowDefinitions.Add(new RowDefinition());
-            gridLayout.RowDefinitions.Add(new RowDefinition());
-            gridLayout.RowDefinitions.Add(new RowDefinition());
-            gridLayout.RowDefinitions.Add(new RowDefinition());
-            gridLayout.ColumnDefinitions.Add(new ColumnDefinition());
-            gridLayout.ColumnDefinitions.Add(new ColumnDefinition());
-            gridLayout.ColumnDefinitions.Add(new ColumnDefinition());
-            gridLayout.ColumnDefinitions.Add(new ColumnDefinition());
-            gridLayout.ColumnDefinitions.Add(new ColumnDefinition());
+            Date.Text = DateTime.Today.ToString("D", DateTimeFormatInfo.InvariantInfo);
 
-            var seatIndex = 0;
-            for (int rowIndex = 0; rowIndex <= 9; rowIndex++)
+            for (int i = 0; i < MaxHeight; i++)
             {
-                for (int columnIndex = 0; columnIndex <= 5; columnIndex++)
+                StackLayout stack = new StackLayout()
                 {
-                    if (seatIndex >= SeatsArrayList.Count)
+                    Orientation = StackOrientation.Horizontal,
+                    HorizontalOptions = LayoutOptions.Center,
+                    VerticalOptions = LayoutOptions.Center,
+                    Spacing = 12
+                };
+                HStack.Children.Add(stack);
+
+                for (int j = 0; j < MaxWidth; j++)
+                {
+                    var button = new Button
                     {
-                        break;
-                    }
-                    var product = SeatsArrayList[seatIndex];
-                    seatIndex += 1;
-                    var Button = new Button
-                    {
-                        //Text = product.Name,
-                        VerticalOptions = LayoutOptions.Center,
-                        HorizontalOptions = LayoutOptions.Center
+                        HeightRequest = 24,
+                        WidthRequest = 40,
+                        CornerRadius = 8
                     };
-                    gridLayout.Children.Add(Button, columnIndex, rowIndex);
+
+                    buttons[i, j] = button;
+                    stack.Children.Add(button);
                 }
             }
         }

@@ -11,15 +11,17 @@
 		<Grid RowSpacing="10" ColumnSpacing="5" BackgroundColor="Black">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="*"/>
-				<RowDefinition Height="80"/>
-				<RowDefinition Height="40"/>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="auto"/>
 				<RowDefinition Height="*"/>
-				<RowDefinition Height="64"/>
+				<RowDefinition Height="auto"/>
 			</Grid.RowDefinitions>
 			
 			<!--Poster Preview-->
-			<Image Source="{local:ImageResource Theater-Application.Images.Sonic.jpg}" Grid.Row="0" Aspect="AspectFit" x:Name="PosterImage"/>
-
+			<Image Source="{local:ImageResource Theater-Application.Images.SonicBG.jpg}" Grid.Row="0" Grid.RowSpan="5" Aspect="AspectFill" x:Name="PosterImageBG"/>
+			<Frame Grid.Row="0" Grid.RowSpan="5" BackgroundColor="#A0000000"/>
+			<Image Source="{local:ImageResource Theater-Application.Images.Sonic.jpg}" Margin="5" Grid.Row="0" Aspect="AspectFit" x:Name="PosterImage"/>
+			
 			<!--Information-->
 			<StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="Center">
 				<Frame Style="{StaticResource Preview Frame}">
@@ -37,10 +39,10 @@
 			</StackLayout>
 
 			<!--Title-->
-			<Label Grid.Row="2" Text="SONIC THE HEDGEHOG (2020)" FontSize="24" TextColor="Firebrick"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" x:Name="Title"/>
+			<Label Grid.Row="2" Text="SONIC THE HEDGEHOG" FontSize="28" TextColor="Firebrick" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" x:Name="Title" FontAttributes="Bold"/>
 			
 			<!--Details-->
-			<StackLayout Grid.Row="3" Spacing="0">
+			<StackLayout Grid.Row="3" Spacing="0" Padding="10,0">
 				<Label Style="{StaticResource Preview Header}" Text="Description:"/>
 				<Label Style="{StaticResource Preview Body}" x:Name="Description" Text="Sonic tries to navigate the complexities of life on Earth with his newfound best friend -- a human named Tom Wachowski. They must soon join forces to prevent the evil Dr. Robotnik from capturing Sonic and using his powers for world domination."/>
 				<Label Style="{StaticResource Preview Header}" Text="Directors:"/>
@@ -52,9 +54,9 @@
 			</StackLayout>
 			
 			<!--Buttons-->
-			<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="4" Spacing="32">
-				<Button Style="{StaticResource Preview Button}" Text="Watch Trailer"/>
-				<Button Style="{StaticResource Preview Button}" Text="Select Seating"/>
+			<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="4" Spacing="32" Padding="16">
+				<Button Style="{StaticResource Preview Button}" Text="Watch Trailer" Clicked="WatchTrailer"/>
+				<Button Style="{StaticResource Preview Button}" Text="Select Seating" Clicked="Seating"/>
 			</StackLayout>
 		</Grid>
 	</ContentPage.Content>

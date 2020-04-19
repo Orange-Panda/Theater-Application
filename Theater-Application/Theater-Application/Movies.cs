@@ -1,10 +1,9 @@
-﻿using System;
-using System.Diagnostics;
-using System.IO;
-using System.Reflection;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using Newtonsoft.Json;
+using System.Reflection;
 
 namespace Movie_Theater
 {
@@ -73,6 +72,7 @@ namespace Movie_Theater
     {
         public string videoUrl;
         public string imageName;
+        public string backgroundName;
         public string title;
         public string description;
         public string directors;

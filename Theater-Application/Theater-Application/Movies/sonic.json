@@ -1,6 +1,7 @@
 {
 	"videoUrl": "https://www.youtube.com/watch?v=szby7ZHLnkA",
 	"imageName": "Sonic.jpg",
+	"backgroundName": "SonicBG.jpg",
 	"title": "Sonic the Hedgehog",
 	"description": "After discovering a small, blue, fast hedgehog, a small-town police officer must help it defeat an evil genius who wants to do experiments on it.",
 	"movieLength": 99.0,
