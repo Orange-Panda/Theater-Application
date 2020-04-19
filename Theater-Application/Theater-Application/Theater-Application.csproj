@@ -92,6 +92,9 @@
     <Compile Update="MoviePreview.xaml.cs">
       <DependentUpon>MoviePreview.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Checkout.xaml.cs">
+      <DependentUpon>Checkout.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Seating.xaml.cs">
       <DependentUpon>Seating.xaml</DependentUpon>
     </Compile>
