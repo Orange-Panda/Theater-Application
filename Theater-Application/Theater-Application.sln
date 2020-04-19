@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theater-Application.Android
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theater-Application.iOS", "Theater-Application.iOS\Theater-Application.iOS.csproj", "{443F533E-F6AF-4F66-B57C-53215648ACD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theater-Application", "Theater-Application\Theater-Application.csproj", "{EF19CBC4-59AF-4D5B-9254-725BCB6427A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Theater-Application", "Theater-Application\Theater-Application.csproj", "{EF19CBC4-59AF-4D5B-9254-725BCB6427A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

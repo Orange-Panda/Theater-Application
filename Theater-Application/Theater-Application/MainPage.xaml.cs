@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Movie_Theater;
 using Xamarin.Forms;
 
 namespace Theater_Application
@@ -16,41 +19,39 @@ namespace Theater_Application
 		public MainPage()
 		{
 			InitializeComponent();
-			
-		}
-		private async void TapGestureRecognizer_Tapped_1(Object sender, EventArgs e)
-		{
-			await Navigation.PushAsync(new Page1());
+
+			bool alt = false;
+			foreach (Movie movie in Movies.GetMovieList())
+			{
+				Image image = new Image
+				{
+					Aspect = Aspect.AspectFit,
+					Source = ImageSource.FromResource($"Theater-Application.Images.{movie.imageName}", typeof(EmbeddedImages).GetTypeInfo().Assembly),
+					HeightRequest = 350
+				};
+
+				image.BindingContext = movie;
+
+				TapGestureRecognizer gesture = new TapGestureRecognizer();
+				gesture.Tapped += GoToPreview;
+				image.GestureRecognizers.Add(gesture);
+
+				if (alt)
+				{
+					Stack2.Children.Add(image);
+				}
+				else
+				{
+					Stack1.Children.Add(image);
+				}
+				alt = !alt;
+			}
 		}
 
-		private async void TapGestureRecognizer_Tapped_2(Object sender, EventArgs e)
+		private async void GoToPreview(object sender, EventArgs e)
 		{
-			await Navigation.PushAsync(new Page2());
+			Movies.SetMovie((Movie)((BindableObject)sender).BindingContext);
+			await Navigation.PushAsync(new MoviePreview());
 		}
-		private async void TapGestureRecognizer_Tapped_3(Object sender, EventArgs e)
-		{
-			await Navigation.PushAsync(new Page3());
-		}
-		private async void TapGestureRecognizer_Tapped_4(Object sender, EventArgs e)
-		{
-			await Navigation.PushAsync(new Page4());
-		}
-		private async void TapGestureRecognizer_Tapped_5(Object sender, EventArgs e)
-		{
-			await Navigation.PushAsync(new Page5());
-		}
-		private async void TapGestureRecognizer_Tapped_6(Object sender, EventArgs e)
-		{
-			await Navigation.PushAsync(new Page6());
-		}
-		private async void TapGestureRecognizer_Tapped_7(Object sender, EventArgs e)
-		{
-			await Navigation.PushAsync(new Page7());
-		}
-		private async void TapGestureRecognizer_Tapped_8(Object sender, EventArgs e)
-		{
-			await Navigation.PushAsync(new Page8());
-		}
-
 	}
 }

@@ -4,10 +4,10 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Theater_Application.Page9">
+             x:Class="Theater_Application.Seating">
 
     <ScrollView>
-    <Grid x:Name="gridLayout">
-    </Grid>
-        </ScrollView>
+        <Grid x:Name="gridLayout">
+        </Grid>
+    </ScrollView>
 </ContentPage>

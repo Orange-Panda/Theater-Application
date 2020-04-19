@@ -11,42 +11,79 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <None Remove="Images\BehindYou.jpg" />
+    <None Remove="Images\BirdsOfPrey.jpg" />
+    <None Remove="Images\CallOfTheWild.jpg" />
+    <None Remove="Images\Dolittle.jpg" />
+    <None Remove="Images\Jumanji.jpg" />
+    <None Remove="Images\Sonic.jpg" />
+    <None Remove="Images\StarWars9.jpg" />
+    <None Remove="Images\titanic.jpg" />
+    <None Remove="Movies\behindYou.json" />
+    <None Remove="Movies\birdsOfPrey.json" />
+    <None Remove="Movies\dolittle.json" />
+    <None Remove="Movies\jumanjiTheNextLevel.json" />
+    <None Remove="Movies\riseOfSkywalker.json" />
+    <None Remove="Movies\sonic.json" />
+    <None Remove="Movies\theCallOfTheWild.json" />
+    <None Remove="Movies\titanic.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Page1.xaml.cs">
-      <DependentUpon>Page1.xaml</DependentUpon>
+    <EmbeddedResource Include="Images\BirdsOfPrey.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\BehindYou.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Dolittle.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Jumanji.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Sonic.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\StarWars9.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\CallOfTheWild.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Titanic.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movies\behindYou.json" />
+    <EmbeddedResource Include="Movies\birdsOfPrey.json" />
+    <EmbeddedResource Include="Movies\dolittle.json" />
+    <EmbeddedResource Include="Movies\jumanjiTheNextLevel.json" />
+    <EmbeddedResource Include="Movies\riseOfSkywalker.json" />
+    <EmbeddedResource Include="Movies\sonic.json" />
+    <EmbeddedResource Include="Movies\theCallOfTheWild.json" />
+    <EmbeddedResource Include="Movies\titanic.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.617" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="MoviePreview.xaml.cs">
+      <DependentUpon>MoviePreview.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Seating.xaml.cs">
+      <DependentUpon>Seating.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Page1.xaml">
+    <EmbeddedResource Update="MoviePreview.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Page2.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Page3.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Page4.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Page5.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Page6.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Page7.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Page8.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Page9.xaml">
+    <EmbeddedResource Update="Seating.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

@@ -5,7 +5,40 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Theater_Application.App">
-    <Application.Resources>
-
-    </Application.Resources>
+	<Application.Resources>
+		<!--Definitions for the movie preview page-->
+		<Style x:Key="Preview Label" TargetType="Label">
+			<Setter Property="FontSize" Value="20"/>
+			<Setter Property="TextColor" Value="White"/>
+			<Setter Property="HorizontalTextAlignment" Value="Center"/>
+			<Setter Property="VerticalTextAlignment" Value="Center"/>
+		</Style>
+		<Style x:Key="Preview Frame" TargetType="Frame">
+			<Setter Property="HeightRequest" Value="80"/>
+			<Setter Property="WidthRequest" Value="80"/>
+			<Setter Property="CornerRadius" Value="40"/>
+			<Setter Property="HorizontalOptions" Value="Start"/>
+			<Setter Property="Margin" Value="0"/>
+			<Setter Property="Padding" Value="0"/>
+			<Setter Property="VerticalOptions" Value="Start"/>
+			<Setter Property="BackgroundColor" Value="Firebrick"/>
+		</Style>
+		<Style x:Key="Preview Header" TargetType="Label">
+			<Setter Property="FontSize" Value="14"/>
+			<Setter Property="FontAttributes" Value="Bold"/>
+			<Setter Property="TextColor" Value="Firebrick"/>
+		</Style>
+		<Style x:Key="Preview Body" TargetType="Label">
+			<Setter Property="FontSize" Value="12"/>
+			<Setter Property="TextColor" Value="White"/>
+		</Style>
+		<Style x:Key="Preview Button" TargetType="Button">
+			<Setter Property="TextColor" Value="Firebrick"/>
+			<Setter Property="BorderColor" Value="Firebrick"/>
+			<Setter Property="BackgroundColor" Value="Black"/>
+			<Setter Property="BorderWidth" Value="2"/>
+			<Setter Property="CornerRadius" Value="10"/>
+			<Setter Property="HeightRequest" Value="32"/>
+		</Style>
+	</Application.Resources>
 </Application>

@@ -11,17 +11,17 @@ namespace Theater_Application
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
-    public partial class Page9 : ContentPage
+    public partial class Seating : ContentPage
 {
-        private List<Seats> SeatsArrayList;
+        private List<Seat> SeatsArrayList;
 
-        public Page9()
+        public Seating()
         {
             InitializeComponent();
-            SeatsArrayList = new List<Seats>();
+            SeatsArrayList = new List<Seat>();
             for (int i = 0; i < 50; i++)
             {
-                SeatsArrayList.Add(new Seats { Name = "" });
+                //SeatsArrayList.Add(new Seat { Name = "" });
             }
 
             gridLayout.RowDefinitions.Add(new RowDefinition());
@@ -53,7 +53,7 @@ namespace Theater_Application
                     seatIndex += 1;
                     var Button = new Button
                     {
-                        Text = product.Name,
+                        //Text = product.Name,
                         VerticalOptions = LayoutOptions.Center,
                         HorizontalOptions = LayoutOptions.Center
                     };
