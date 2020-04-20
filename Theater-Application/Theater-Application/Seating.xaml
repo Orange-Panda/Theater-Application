@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:local="clr-namespace:Theater_Application;assembly=Theater-Application"
              mc:Ignorable="d"
              x:Class="Theater_Application.Seating">
 	<Grid BackgroundColor="Black">
@@ -15,10 +16,14 @@
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 		
+		<!--Background-->
+		<Image Source="{local:ImageResource Theater-Application.Images.SonicBG.jpg}" Grid.Row="0" Grid.RowSpan="6" Aspect="AspectFill" x:Name="PosterImageBG"/>
+		<Frame Grid.Row="0" Grid.RowSpan="6" BackgroundColor="#A0000000"/>
+
 		<!--Title-->
 		<StackLayout Orientation="Vertical" Grid.Row="1" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand" Padding="20">
-			<Label Style="{StaticResource Seat Text}" Text="Seat Availability" FontSize="Title" FontAttributes="Bold"/>
-			<Label Style="{StaticResource Seat Text}" Text="Today's Date" x:Name="Date" FontSize="Subtitle"/>
+			<Label Style="{StaticResource Seat Text}" Text="Seat Availability" x:Name="SeatTitle" FontSize="Title" FontAttributes="Bold"/>
+			<Label Style="{StaticResource Seat Text}" TextColor="White" Text="Today's Date" x:Name="Date" FontSize="Subtitle"/>
 			<Frame HeightRequest="1" BackgroundColor="Firebrick" HorizontalOptions="Start" Padding="0" WidthRequest="250"/>
 		</StackLayout>
 

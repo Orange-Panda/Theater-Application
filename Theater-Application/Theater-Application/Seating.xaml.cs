@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
+using System.Reflection;
 using Xamarin.Forms;
 
 namespace Theater_Application
@@ -11,18 +12,18 @@ namespace Theater_Application
     [DesignTimeVisible(false)]
     public partial class Seating : ContentPage
     {
-        private const int MaxHeight = 10;
-        private const int MaxWidth = 7;
-        private Seat[,] seats = new Seat[MaxHeight, MaxWidth];
-        private Button[,] buttons = new Button[MaxHeight, MaxWidth];
+        private Button[,] buttons = new Button[SeatingChart.Height, SeatingChart.Width];
 
         public Seating()
         {
             InitializeComponent();
 
+            SeatTitle.Text = $"{Movies.SelectedMovie.title} Availability";
             Date.Text = DateTime.Today.ToString("D", DateTimeFormatInfo.InvariantInfo);
+            PosterImageBG.Source = ImageSource.FromResource($"Theater-Application.Images.{Movies.SelectedMovie.backgroundName}", typeof(EmbeddedImages).GetTypeInfo().Assembly);
 
-            for (int i = 0; i < MaxHeight; i++)
+            Random random = new Random();
+            for (int i = 0; i < SeatingChart.Height; i++)
             {
                 StackLayout stack = new StackLayout()
                 {
@@ -33,13 +34,24 @@ namespace Theater_Application
                 };
                 HStack.Children.Add(stack);
 
-                for (int j = 0; j < MaxWidth; j++)
+                for (int j = 0; j < SeatingChart.Width; j++)
                 {
+                    Color color;
+                    switch (Movies.seatingCharts[Movies.SelectedMovie][0].seats[i, j].seatStatus)
+                    {
+                        case SeatStatus.Available: color = Color.White; break;
+                        case SeatStatus.Reserved: color = Color.Gray; break;
+                        case SeatStatus.Taken: color = new Color(.125, .125, .125); break;
+                        case SeatStatus.Null: color = new Color(0, 0, 0, 0); break;
+                        default: color = Color.White; break;
+                    }
+
                     var button = new Button
                     {
                         HeightRequest = 24,
                         WidthRequest = 40,
-                        CornerRadius = 8
+                        CornerRadius = 8,
+                        BackgroundColor = color
                     };
 
                     buttons[i, j] = button;

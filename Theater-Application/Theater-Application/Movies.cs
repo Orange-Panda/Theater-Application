@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace Movie_Theater
+namespace Theater_Application
 {
     /// <summary>
     /// Contains a collection of the movies and functions to access them.
@@ -13,6 +13,7 @@ namespace Movie_Theater
     public static class Movies
     {
         public static Movie SelectedMovie { get; private set; }
+        public static Dictionary<Movie, List<SeatingChart>> seatingCharts = new Dictionary<Movie, List<SeatingChart>>();
         private static Dictionary<string, Movie> movies = new Dictionary<string, Movie>();
         private static bool initialized;
 
@@ -32,6 +33,7 @@ namespace Movie_Theater
             var assembly = Assembly.GetExecutingAssembly();
             string[] resources = assembly.GetManifestResourceNames();
 
+            Random random = new Random();
             foreach (string resource in resources)
             {
                 if (resource.StartsWith("Theater-Application.Movies."))
@@ -40,7 +42,17 @@ namespace Movie_Theater
                     StreamReader reader = new StreamReader(stream);
                     string json = reader.ReadToEnd();
                     string name = resource.Remove(0, "Theater-Application.Movies.".Length);
-                    movies.Add(name, JsonConvert.DeserializeObject<Movie>(json));
+                    Movie movie = JsonConvert.DeserializeObject<Movie>(json);
+                    movies.Add(name, movie);
+
+                    List<SeatingChart> charts = new List<SeatingChart>();
+                    int showings = random.Next(2, 5);
+                    for (int i = 0; i < showings; i++)
+                    {
+                        SeatingChart newChart = new SeatingChart(random.NextDouble() / 2 + 0.05);
+                        charts.Add(newChart);
+                    }
+                    seatingCharts.Add(movie, charts);
                 }
             }
 
@@ -68,7 +80,7 @@ namespace Movie_Theater
     /// Datatype that contains details about a movie.
     /// </summary>
     [Serializable]
-    public struct Movie
+    public class Movie
     {
         public string videoUrl;
         public string imageName;

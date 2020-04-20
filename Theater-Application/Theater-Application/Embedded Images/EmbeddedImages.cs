@@ -2,7 +2,7 @@
 using System.Reflection;
 using Xamarin.Forms;
 
-namespace Movie_Theater
+namespace Theater_Application
 {
 	public class EmbeddedImages : ContentPage
 	{

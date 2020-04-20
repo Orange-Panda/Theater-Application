@@ -1,4 +1,4 @@
-﻿using Movie_Theater;
+﻿using Theater_Application;
 using System;
 using System.ComponentModel;
 using System.Reflection;

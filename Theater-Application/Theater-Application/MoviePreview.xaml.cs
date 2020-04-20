@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Reflection;
-using Movie_Theater;
+using Theater_Application;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 

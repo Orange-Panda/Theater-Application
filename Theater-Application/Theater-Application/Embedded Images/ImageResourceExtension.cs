@@ -4,7 +4,7 @@ using System.Reflection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Movie_Theater
+namespace Theater_Application
 {
     [ContentProperty(nameof(Source))]
     public class ImageResourceExtension : IMarkupExtension

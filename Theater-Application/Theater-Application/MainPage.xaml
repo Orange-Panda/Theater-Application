@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-			 xmlns:local="clr-namespace:Movie_Theater;assembly=Theater-Application"
+			 xmlns:local="clr-namespace:Theater_Application;assembly=Theater-Application"
              mc:Ignorable="d"
              x:Class="Theater_Application.MainPage">
 	<ContentPage.Content>
@@ -16,11 +16,11 @@
 
 				<Image Source="{local:ImageResource Theater-Application.Images.TheaterBG.jpg}" Grid.ColumnSpan="2" Aspect="AspectFill"/>
 
-				<StackLayout x:Name="Stack1" Orientation="Vertical" Grid.Column="0">
+				<StackLayout x:Name="Stack1" Orientation="Vertical" Grid.Column="0" Padding="5">
 
 				</StackLayout>
-				
-				<StackLayout x:Name="Stack2" Orientation="Vertical" Grid.Column="1">
+
+				<StackLayout x:Name="Stack2" Orientation="Vertical" Grid.Column="1" Padding="5">
 
 				</StackLayout>
 			</Grid>

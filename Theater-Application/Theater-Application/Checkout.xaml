@@ -61,7 +61,7 @@
 
                         <StackLayout Orientation="Vertical" >
                             <Label Text="CARD-ID" TextColor="#e87e04"></Label>
-                            <Picker x:Name="CardID" FontSize="15" SelectedIndexChanged=" "></Picker>
+                            <Picker x:Name="CardID" FontSize="15"></Picker>
                         </StackLayout>
 
                     </StackLayout>
