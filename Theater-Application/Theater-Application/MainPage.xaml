@@ -13,14 +13,19 @@
 					<ColumnDefinition Width="*"/>
 					<ColumnDefinition Width="*"/>
 				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="80"/>
+					<RowDefinition Height="auto"/>
+				</Grid.RowDefinitions>
 
-				<Image Source="{local:ImageResource Theater-Application.Images.TheaterBG.jpg}" Grid.ColumnSpan="2" Aspect="AspectFill"/>
+				<Image Source="{local:ImageResource Theater-Application.Images.TheaterBG.jpg}" Grid.ColumnSpan="2" Grid.RowSpan="2" Aspect="AspectFill"/>
+				<Label Style="{StaticResource Title}" Text="NOW PLAYING" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.ColumnSpan="2"/>
 
-				<StackLayout x:Name="Stack1" Orientation="Vertical" Grid.Column="0" Padding="5">
+				<StackLayout x:Name="Stack1" Orientation="Vertical" Grid.Column="0" Grid.Row="1" Padding="5">
 
 				</StackLayout>
 
-				<StackLayout x:Name="Stack2" Orientation="Vertical" Grid.Column="1" Padding="5">
+				<StackLayout x:Name="Stack2" Orientation="Vertical" Grid.Column="1" Grid.Row="1" Padding="5">
 
 				</StackLayout>
 			</Grid>

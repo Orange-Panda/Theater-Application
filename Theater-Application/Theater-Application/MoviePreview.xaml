@@ -25,38 +25,38 @@
 			<!--Information-->
 			<StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="Center">
 				<Frame Style="{StaticResource Preview Frame}">
-					<Label Style="{StaticResource Preview Label}" Text="PG" x:Name="ContentRating"/>
+					<Label Style="{StaticResource Preview Info}" Text="PG" x:Name="ContentRating"/>
 				</Frame>
 				<Frame Style="{StaticResource Preview Frame}">
-					<Label Style="{StaticResource Preview Label}" Text=" 100m" x:Name="Length"/>
+					<Label Style="{StaticResource Preview Info}" Text=" 100m" x:Name="Length"/>
 				</Frame>
 				<Frame Style="{StaticResource Preview Frame}">
-					<Label Style="{StaticResource Preview Label}" Text="Action/Adventure" FontSize="12" x:Name="Genre"/>
+					<Label Style="{StaticResource Preview Info}" Text="Action/Adventure" FontSize="12" x:Name="Genre"/>
 				</Frame>
 				<Frame Style="{StaticResource Preview Frame}">
-					<Label Style="{StaticResource Preview Label}" Text=" 9.3/10" x:Name="Score"/>
+					<Label Style="{StaticResource Preview Info}" Text=" 9.3/10" x:Name="Score"/>
 				</Frame>
 			</StackLayout>
 
 			<!--Title-->
-			<Label Grid.Row="2" Text="SONIC THE HEDGEHOG" FontSize="28" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" x:Name="Title" FontAttributes="Bold"/>
+			<Label Grid.Row="2" Text="SONIC THE HEDGEHOG" x:Name="Title" Style="{StaticResource Title}"/>
 			
 			<!--Details-->
 			<StackLayout Grid.Row="3" Spacing="0" Padding="10,0">
-				<Label Style="{StaticResource Preview Header}" Text="Description:"/>
-				<Label Style="{StaticResource Preview Body}" x:Name="Description" Text="Sonic tries to navigate the complexities of life on Earth with his newfound best friend -- a human named Tom Wachowski. They must soon join forces to prevent the evil Dr. Robotnik from capturing Sonic and using his powers for world domination."/>
-				<Label Style="{StaticResource Preview Header}" Text="Directors:"/>
-				<Label Style="{StaticResource Preview Body}" x:Name="Directors" Text="Brett Fowler"/>
-				<Label Style="{StaticResource Preview Header}" Text="Writers:"/>
-				<Label Style="{StaticResource Preview Body}" x:Name="Writers" Text="Patrick Casey, Josh Miller, and Oren Uziel"/>
-				<Label Style="{StaticResource Preview Header}" Text="Cast:"/>
-				<Label Style="{StaticResource Preview Body}" x:Name="Cast" Text="James Marsden, Ben Schwartz, Tika Sumpter, Jim Carrey..."/>
+				<Label Style="{StaticResource Header}" Text="Description:"/>
+				<Label Style="{StaticResource Body}" x:Name="Description" Text="Sonic tries to navigate the complexities of life on Earth with his newfound best friend -- a human named Tom Wachowski. They must soon join forces to prevent the evil Dr. Robotnik from capturing Sonic and using his powers for world domination."/>
+				<Label Style="{StaticResource Header}" Text="Directors:"/>
+				<Label Style="{StaticResource Body}" x:Name="Directors" Text="Brett Fowler"/>
+				<Label Style="{StaticResource Header}" Text="Writers:"/>
+				<Label Style="{StaticResource Body}" x:Name="Writers" Text="Patrick Casey, Josh Miller, and Oren Uziel"/>
+				<Label Style="{StaticResource Header}" Text="Cast:"/>
+				<Label Style="{StaticResource Body}" x:Name="Cast" Text="James Marsden, Ben Schwartz, Tika Sumpter, Jim Carrey..."/>
 			</StackLayout>
 			
 			<!--Buttons-->
 			<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="4" Spacing="32" Padding="16">
-				<Button Style="{StaticResource Preview Button}" Text="Watch Trailer" Clicked="WatchTrailer"/>
-				<Button Style="{StaticResource Preview Button}" Text="Select Seating" Clicked="Seating"/>
+				<Button Style="{StaticResource Button}" Text="Watch Trailer" Clicked="WatchTrailer"/>
+				<Button Style="{StaticResource Button}" Text="Select Seating" Clicked="Seating"/>
 			</StackLayout>
 		</Grid>
 	</ContentPage.Content>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Reflection;
@@ -6,12 +7,11 @@ using Xamarin.Forms;
 
 namespace Theater_Application
 {
-	// Learn more about making custom code visible in the Xamarin.Forms previewer
-	// by visiting https://aka.ms/xamarinforms-previewer
 	[DesignTimeVisible(false)]
 	public partial class Seating : ContentPage
 	{
-		private Button[,] buttons = new Button[SeatingChart.Height, SeatingChart.Width];
+		private Button[,] seatButtons = new Button[SeatingChart.Height, SeatingChart.Width];
+		private List<Button> timeButtons = new List<Button>();
 		private SeatingChart visibleChart;
 		public static SeatingChart SelectedChart { get; private set; }
 		public static SeatIndex SelectedSeat { get; private set; }
@@ -85,20 +85,21 @@ namespace Theater_Application
 
 					button.BindingContext = new SeatIndex(i, j);
 					button.Clicked += Button_SeatSelect;
-					buttons[i, j] = button;
+					seatButtons[i, j] = button;
 					stack.Children.Add(button);
 				}
 			}
 
 			//Time selection
+			bool first = true;
 			foreach (SeatingChart chart in Movies.seatingCharts[Movies.SelectedMovie])
 			{
 				Button button = new Button
 				{
 					Text = chart.time,
 					BindingContext = chart,
-					TextColor = Color.Firebrick,
-					BorderColor = Color.Firebrick,
+					TextColor = first ? Color.White : Color.Firebrick,
+					BorderColor = first ? Color.White : Color.Firebrick,
 					BackgroundColor = Color.Black,
 					BorderWidth = 2,
 					CornerRadius = 10,
@@ -106,7 +107,9 @@ namespace Theater_Application
 				};
 
 				button.Clicked += Button_TimeSelect;
+				timeButtons.Add(button);
 				TimeSelect.Children.Add(button);
+				first = false;
 			}
 
 			LoadChart(Movies.seatingCharts[Movies.SelectedMovie][0]);
@@ -114,10 +117,20 @@ namespace Theater_Application
 
 		private void Button_TimeSelect(object sender, EventArgs e)
 		{
-			SeatingChart chart = (SeatingChart)((Button)sender).BindingContext;
+			Button buttonSender = (Button)sender;
+			SeatingChart chart = (SeatingChart)buttonSender.BindingContext;
 			if (visibleChart != chart)
 			{
+				foreach (Button button in timeButtons)
+				{
+					button.TextColor = Color.Firebrick;
+					button.BorderColor = Color.Firebrick;
+				}
+
 				LoadChart(chart);
+
+				buttonSender.TextColor = Color.White;
+				buttonSender.BorderColor = Color.White;
 			}
 		}
 
@@ -146,8 +159,8 @@ namespace Theater_Application
 						default: color = Color.White; break;
 					}
 
-					buttons[i, j].IsEnabled = chart.seats[i, j].seatStatus == SeatStatus.Available;
-					buttons[i, j].BackgroundColor = color;
+					seatButtons[i, j].IsEnabled = chart.seats[i, j].seatStatus == SeatStatus.Available;
+					seatButtons[i, j].BackgroundColor = color;
 				}
 			}
 		}

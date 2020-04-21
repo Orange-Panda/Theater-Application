@@ -21,7 +21,7 @@
 		<Frame Grid.Row="0" Grid.RowSpan="6" BackgroundColor="#A0000000"/>
 
 		<!--Title-->
-		<StackLayout Orientation="Vertical" Grid.Row="1" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand" Padding="20">
+		<StackLayout Orientation="Vertical" Grid.Row="1" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand" Padding="20, 5">
 			<Label Style="{StaticResource Seat Text}" Text="Seat Availability" x:Name="SeatTitle" FontSize="Title" FontAttributes="Bold"/>
 			<Label Style="{StaticResource Seat Text}" TextColor="White" Text="Today's Date" x:Name="Date" FontSize="Subtitle"/>
 			<Frame HeightRequest="1" BackgroundColor="Firebrick" HorizontalOptions="Start" Padding="0" WidthRequest="250"/>
@@ -33,7 +33,7 @@
 		</StackLayout>
 		
 		<!--Key-->
-		<StackLayout Grid.Row="3" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Padding="20" Spacing="10">
+		<StackLayout Grid.Row="3" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Padding="20,5" Spacing="10">
 			<Frame Padding="0" WidthRequest="40" HeightRequest="24"/>
 			<Label Style="{StaticResource Seat Text}" Text="Available" VerticalTextAlignment="Center"/>
 			<Frame BackgroundColor="Gray" Padding="0" WidthRequest="40" HeightRequest="24"/>
@@ -43,6 +43,6 @@
 		</StackLayout>
 		
 		<!---Seat selection-->
-		<StackLayout Grid.Row="4" x:Name="HStack" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Spacing="12" Padding="20"/>
+		<StackLayout Grid.Row="4" x:Name="HStack" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Spacing="12" Padding="20, 5"/>
 	</Grid>
 </ContentPage>

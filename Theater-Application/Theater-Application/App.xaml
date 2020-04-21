@@ -7,7 +7,7 @@
              x:Class="Theater_Application.App">
 	<Application.Resources>
 		<!--Definitions for the movie preview page-->
-		<Style x:Key="Preview Label" TargetType="Label">
+		<Style x:Key="Preview Info" TargetType="Label">
 			<Setter Property="FontSize" Value="20"/>
 			<Setter Property="TextColor" Value="White"/>
 			<Setter Property="HorizontalTextAlignment" Value="Center"/>
@@ -23,16 +23,16 @@
 			<Setter Property="VerticalOptions" Value="Start"/>
 			<Setter Property="BackgroundColor" Value="Firebrick"/>
 		</Style>
-		<Style x:Key="Preview Header" TargetType="Label">
+		<Style x:Key="Header" TargetType="Label">
 			<Setter Property="FontSize" Value="14"/>
 			<Setter Property="FontAttributes" Value="Bold"/>
 			<Setter Property="TextColor" Value="Firebrick"/>
 		</Style>
-		<Style x:Key="Preview Body" TargetType="Label">
+		<Style x:Key="Body" TargetType="Label">
 			<Setter Property="FontSize" Value="12"/>
 			<Setter Property="TextColor" Value="White"/>
 		</Style>
-		<Style x:Key="Preview Button" TargetType="Button">
+		<Style x:Key="Button" TargetType="Button">
 			<Setter Property="TextColor" Value="Firebrick"/>
 			<Setter Property="BorderColor" Value="Firebrick"/>
 			<Setter Property="BackgroundColor" Value="Black"/>
@@ -41,6 +41,18 @@
 			<Setter Property="HeightRequest" Value="48"/>
 			<Setter Property="WidthRequest" Value="150"/>
 		</Style>
+		<Style x:Key="Title" TargetType="Label">
+			<Setter Property="FontSize" Value="28"/>
+			<Setter Property="TextColor" Value="White"/>
+			<Setter Property="HorizontalTextAlignment" Value="Center"/>
+			<Setter Property="VerticalTextAlignment" Value="Center"/>
+			<Setter Property="FontAttributes" Value="Bold"/>
+		</Style>
+		<Style x:Key="Dropdown" TargetType="Picker">
+			<Setter Property="TitleColor" Value="OrangeRed"/>
+			<Setter Property="TextColor" Value="White"/>
+			<Setter Property="FontSize" Value="12"/>
+		</Style> 
 		<!--Definitions for the seat selection page-->
 		<Style x:Key="Seat Text" TargetType="Label">
 			<Setter Property="HorizontalTextAlignment" Value="Start"/>

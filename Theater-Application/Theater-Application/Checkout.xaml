@@ -9,58 +9,42 @@
     <ScrollView>
         <Grid>
 			<Grid.RowDefinitions>
-				<RowDefinition Height="*"/>
+				<RowDefinition Height="64"/>
 				<RowDefinition Height="auto"/>
-				<RowDefinition Height=".5*"/>
+				<RowDefinition Height="64"/>
 				<RowDefinition Height="auto"/>
 				<RowDefinition Height=".5*"/>
 				<RowDefinition Height="auto"/>
 				<RowDefinition Height="*"/>
 			</Grid.RowDefinitions>
 
+			<!---Background elements-->
 			<Image Source="{local:ImageResource Theater-Application.Images.SonicBG.jpg}" Grid.Row="0" Grid.RowSpan="7" Aspect="AspectFill" x:Name="PosterImageBG"/>
 			<Frame Grid.Row="0" Grid.RowSpan="7" BackgroundColor="#A0000000"/>
-
-			<StackLayout Orientation="Vertical" Grid.Row="1" BackgroundColor="#A0000000">
-				<Label Text="YOUR SELECTION"/>
-				<Frame BackgroundColor="#20000000" Margin="3">
-					<StackLayout Orientation="Horizontal">
-						<StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-							<Label Text="Movie Selection" HorizontalOptions="Start" TextColor="Firebrick"/>
-							<Label x:Name="MovieSelect" FontSize="15"/>
-						</StackLayout>
-					</StackLayout>
-				</Frame>
-				<Frame BackgroundColor="#20000000" Margin="3">
-					<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-						<StackLayout Orientation="Horizontal">
-							<StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-								<Label Text="Seat Selected" TextColor="Firebrick"/>
-								<Label x:Name="SeatSelect" FontSize="15"/>
-							</StackLayout>
-							<StackLayout Orientation="Vertical">
-								<Label Text="Time Selected" HorizontalOptions="Center" TextColor="Firebrick"/>
-								<Label x:Name="TimeSelect" FontSize="15"/>
-							</StackLayout>
-						</StackLayout>
-					</StackLayout>
-				</Frame>
-				<Frame BackgroundColor="#20000000" Margin="3">
-					<StackLayout Orientation="Horizontal">
-						<StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-							<Label Text="Ticket Type" TextColor="Firebrick"/>
-							<Label x:Name="TicketType" FontSize="15"/>
-						</StackLayout>
-						<StackLayout Orientation="Vertical">
-							<Label Text="Total Cost" TextColor="Firebrick"/>
-							<Label x:Name="Total" FontSize="15"/>
-						</StackLayout>
-					</StackLayout>
-				</Frame>
+			
+			<!--Purchase preview-->
+			<Label Grid.Row="0" Style="{StaticResource Title}" Text="YOUR SELECTION"/>
+			<StackLayout Orientation="Horizontal" Grid.Row="1" BackgroundColor="#A0000000" Padding="0,20">
+				<StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
+					<Label Style="{StaticResource Header}" Text="Movie Selection"/>
+					<Label Style="{StaticResource Body}" Text="Movie Title" x:Name="MovieSelect"/>
+					<Label Style="{StaticResource Header}" Text="Time Selected"/>
+					<Label Style="{StaticResource Body}" Text="12:00PM" x:Name="TimeSelect"/>
+					<Label Style="{StaticResource Header}" Text="Seat Selected"/>
+					<Label Style="{StaticResource Body}" Text="0X" x:Name="SeatSelect"/>
+					<Label Style="{StaticResource Header}" Text="Ticket Type"/>
+					<Picker Style="{StaticResource Dropdown}" Title="Select Ticket Type" x:Name="TicketSelect"/>
+					<Label Style="{StaticResource Header}" Text="Total Cost"/>
+					<Label Style="{StaticResource Body}" Text="$XX.XX" x:Name="Total"/>
+				</StackLayout>
+				<StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand" VerticalOptions="Center">
+					<Image Source="{local:ImageResource Theater-Application.Images.Sonic.jpg}" HeightRequest="256" Aspect="AspectFit" Margin="0,0,20,0" x:Name="PosterImage"/>
+				</StackLayout>
 			</StackLayout>
 
+			<!--Payment information-->
+			<Label Grid.Row="2" Style="{StaticResource Title}" Text="PAYMENT INFORMATION"/>
 			<StackLayout Orientation="Vertical" Grid.Row="3" BackgroundColor="#A0000000">
-				<Label Text="PAYMENT INFORMATION"/>
 				<StackLayout Orientation="Horizontal" Margin="3">
 					<StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
 						<Label Text="NAME" HorizontalOptions="Center" TextColor="Firebrick"/>
@@ -95,7 +79,8 @@
 				</StackLayout>
 			</StackLayout>
 			
-			<Button Clicked ="Button_Clicked" Text="Reserve Ticket" TextColor="White" CornerRadius="20" BackgroundColor="#013243" Grid.Row="5"/>
+			<!--Confirm-->
+			<Button Style="{StaticResource Button}" Clicked ="Button_Clicked" Text="Reserve Ticket" Grid.Row="5"/>
 		</Grid>
     </ScrollView>
 </ContentPage>

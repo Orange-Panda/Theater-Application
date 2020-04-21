@@ -3,11 +3,9 @@ using System.Globalization;
 
 namespace Theater_Application
 {
-	public struct Seat
-	{
-		public SeatStatus seatStatus;
-	}
-
+	/// <summary>
+	/// 2D seating grid for seats available at a movie showing.
+	/// </summary>
 	public class SeatingChart
 	{
 		public const int Height = 9;
@@ -34,6 +32,11 @@ namespace Theater_Application
 		}
 	}
 
+	public struct Seat
+	{
+		public SeatStatus seatStatus;
+	}
+
 	public struct SeatIndex
 	{
 		public int i;
@@ -47,10 +50,9 @@ namespace Theater_Application
 
 		public override string ToString()
 		{
-			return $"{i+1}{(char)('A' + j)}";
+			return $"{i + 1}{(char)('A' + j)}";
 		}
 	}
-
 
 	public enum SeatStatus
 	{

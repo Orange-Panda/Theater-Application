@@ -1,13 +1,10 @@
-﻿using Theater_Application;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Reflection;
 using Xamarin.Forms;
 
 namespace Theater_Application
 {
-	// Learn more about making custom code visible in the Xamarin.Forms previewer
-	// by visiting https://aka.ms/xamarinforms-previewer
 	[DesignTimeVisible(false)]
 	public partial class MainPage : ContentPage
 	{
@@ -22,7 +19,7 @@ namespace Theater_Application
 				{
 					Aspect = Aspect.AspectFit,
 					Source = ImageSource.FromResource($"Theater-Application.Images.{movie.imageName}", typeof(EmbeddedImages).GetTypeInfo().Assembly),
-					HeightRequest = 350
+					HeightRequest = 256
 				};
 
 				image.BindingContext = movie;
