@@ -3,105 +3,99 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:local="clr-namespace:Theater_Application;assembly=Theater-Application"
              mc:Ignorable="d"
              x:Class="Theater_Application.Checkout">
     <ScrollView>
         <Grid>
-            <Grid Grid.Row="0"  Margin="10,10 ">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height=".5*"/>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height=".5*"/>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
 
-                <StackLayout Orientation="Vertical" Margin="0,0" HorizontalOptions="FillAndExpand">
-                    <Frame>
-                        <StackLayout Orientation="Horizontal" Margin="0,0,0,0">
-                        <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-                            <Label Text="Movie Selection" HorizontalOptions="Start" TextColor="#e87e04"/>
-                            <Label x:Name="MovieSelect"  FontSize="15" ></Label>
-                        </StackLayout>
-                    
-                        </StackLayout>
-                    </Frame>
-                    <Frame>
-                        <StackLayout Orientation="Vertical" Margin="0,0" HorizontalOptions="FillAndExpand">
-                            <StackLayout Orientation="Horizontal" Margin="0,0,0,0">
-                                <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-                                    <Label Text="Seat Selected" TextColor="#e87e04"></Label>
-                                    <Label x:Name="SeatSelect"  FontSize="15" ></Label>
-                                </StackLayout>
+			<Image Source="{local:ImageResource Theater-Application.Images.SonicBG.jpg}" Grid.Row="0" Grid.RowSpan="7" Aspect="AspectFill" x:Name="PosterImageBG"/>
+			<Frame Grid.Row="0" Grid.RowSpan="7" BackgroundColor="#A0000000"/>
 
-                                <StackLayout Orientation="Vertical" >
-                                    <Label Text="Time Selected" HorizontalOptions="Center" TextColor="#e87e04"></Label>
-                                    <Label x:Name="TimeSelect" FontSize="15" ></Label>
-                                </StackLayout>
+			<StackLayout Orientation="Vertical" Grid.Row="1" BackgroundColor="#A0000000">
+				<Label Text="YOUR SELECTION"/>
+				<Frame BackgroundColor="#20000000" Margin="3">
+					<StackLayout Orientation="Horizontal">
+						<StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+							<Label Text="Movie Selection" HorizontalOptions="Start" TextColor="Firebrick"/>
+							<Label x:Name="MovieSelect" FontSize="15"/>
+						</StackLayout>
+					</StackLayout>
+				</Frame>
+				<Frame BackgroundColor="#20000000" Margin="3">
+					<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+						<StackLayout Orientation="Horizontal">
+							<StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+								<Label Text="Seat Selected" TextColor="Firebrick"/>
+								<Label x:Name="SeatSelect" FontSize="15"/>
+							</StackLayout>
+							<StackLayout Orientation="Vertical">
+								<Label Text="Time Selected" HorizontalOptions="Center" TextColor="Firebrick"/>
+								<Label x:Name="TimeSelect" FontSize="15"/>
+							</StackLayout>
+						</StackLayout>
+					</StackLayout>
+				</Frame>
+				<Frame BackgroundColor="#20000000" Margin="3">
+					<StackLayout Orientation="Horizontal">
+						<StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+							<Label Text="Ticket Type" TextColor="Firebrick"/>
+							<Label x:Name="TicketType" FontSize="15"/>
+						</StackLayout>
+						<StackLayout Orientation="Vertical">
+							<Label Text="Total Cost" TextColor="Firebrick"/>
+							<Label x:Name="Total" FontSize="15"/>
+						</StackLayout>
+					</StackLayout>
+				</Frame>
+			</StackLayout>
 
-                            </StackLayout>
-                        </StackLayout>
-                    </Frame>
-                    <Frame>
-                    <StackLayout Orientation="Horizontal">
-                            <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-                                <Label Text="Ticket Type" TextColor="#e87e04" ></Label>
-                                <Picker x:Name="TicketType" FontSize="15" ></Picker>
-                            </StackLayout>
-
-                            <StackLayout Orientation="Vertical" Margin="0,0">
-                                <Label Text="Total Cost" TextColor="#e87e04"></Label>
-                                <Label x:Name="Total" FontSize="15"></Label>
-                            </StackLayout>
-
-
-                        </StackLayout>
-                    </Frame>
-                    
-                        
-                        
-                        <StackLayout Orientation="Horizontal" Margin="0,60,0,20">
-                        <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-                            <Label Text="NAME" HorizontalOptions="Center" TextColor="#e87e04"></Label>
-                            <Entry x:Name="Name"  FontSize="15" ></Entry>
-                        </StackLayout>
-
-                        <StackLayout Orientation="Vertical" >
-                            <Label Text="CARD-ID" TextColor="#e87e04"></Label>
-                            <Picker x:Name="CardID" FontSize="15"></Picker>
-                        </StackLayout>
-
-                    </StackLayout>
-
-                    <StackLayout Orientation="Vertical" Margin="0,20" HorizontalOptions="FillAndExpand">
-                        <StackLayout Orientation="Horizontal" Margin="0,0,0,20">
-                            <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-                                <Label Text="Card Number" TextColor="#e87e04"></Label>
-                                <Entry x:Name="CardNum"  FontSize="15" ></Entry>
-                            </StackLayout>
-
-                            <StackLayout Orientation="Vertical" >
-                                <Label Text="Email" HorizontalOptions="Center" TextColor="#e87e04"></Label>
-                                <Entry x:Name="Email" FontSize="15" ></Entry>
-                            </StackLayout>
-
-                        </StackLayout>
-
-
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal">
-                        <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-                            <Label Text="EXP. DATE" TextColor="#e87e04" ></Label>
-                            <Entry x:Name="Expire" FontSize="15" ></Entry>
-                        </StackLayout>
-
-                        <StackLayout Orientation="Vertical" Margin="0,0">
-                            <Label Text="CVV" TextColor="#e87e04"></Label>
-                            <Entry x:Name="CVV" FontSize="15"></Entry>
-                        </StackLayout>
-
-
-                    </StackLayout>
-
-                    <Button Clicked ="Button_Clicked" Text="Reserve Ticket " Margin="60,60,60,0" TextColor="White" CornerRadius="20" BackgroundColor="#013243"></Button>
-
-                </StackLayout>
-
-            </Grid>
-        </Grid>
+			<StackLayout Orientation="Vertical" Grid.Row="3" BackgroundColor="#A0000000">
+				<Label Text="PAYMENT INFORMATION"/>
+				<StackLayout Orientation="Horizontal" Margin="3">
+					<StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+						<Label Text="NAME" HorizontalOptions="Center" TextColor="Firebrick"/>
+						<Entry x:Name="Name"  FontSize="15"/>
+					</StackLayout>
+					<StackLayout Orientation="Vertical" >
+						<Label Text="CARD-ID" TextColor="Firebrick"/>
+						<Picker x:Name="CardID" FontSize="15"/>
+					</StackLayout>
+				</StackLayout>
+				<StackLayout Orientation="Vertical" Margin="3">
+					<StackLayout Orientation="Horizontal">
+						<StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+							<Label Text="Card Number" TextColor="Firebrick"/>
+							<Entry x:Name="CardNum"  FontSize="15"/>
+						</StackLayout>
+						<StackLayout Orientation="Vertical" >
+							<Label Text="Email" HorizontalOptions="Center" TextColor="Firebrick"/>
+							<Entry x:Name="Email" FontSize="15"/>
+						</StackLayout>
+					</StackLayout>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="3">
+					<StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+						<Label Text="EXP. DATE" TextColor="Firebrick"/>
+						<Entry x:Name="Expire" FontSize="15"/>
+					</StackLayout>
+					<StackLayout Orientation="Vertical">
+						<Label Text="CVV" TextColor="Firebrick"/>
+						<Entry x:Name="CVV" FontSize="15"/>
+					</StackLayout>
+				</StackLayout>
+			</StackLayout>
+			
+			<Button Clicked ="Button_Clicked" Text="Reserve Ticket" TextColor="White" CornerRadius="20" BackgroundColor="#013243" Grid.Row="5"/>
+		</Grid>
     </ScrollView>
 </ContentPage>

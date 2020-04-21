@@ -38,7 +38,7 @@
 			<Setter Property="BackgroundColor" Value="Black"/>
 			<Setter Property="BorderWidth" Value="2"/>
 			<Setter Property="CornerRadius" Value="10"/>
-			<Setter Property="HeightRequest" Value="64"/>
+			<Setter Property="HeightRequest" Value="48"/>
 			<Setter Property="WidthRequest" Value="150"/>
 		</Style>
 		<!--Definitions for the seat selection page-->

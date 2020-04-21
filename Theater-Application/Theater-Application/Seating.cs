@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using Xamarin.Forms;
+using System.Globalization;
 
 namespace Theater_Application
 {
@@ -11,18 +10,19 @@ namespace Theater_Application
 
 	public class SeatingChart
 	{
-		public const int Height = 10;
+		public const int Height = 9;
 		public const int Width = 7;
+		public int hour, minute;
 		public string time = "0:00 PM";
 		public Seat[,] seats = new Seat[Height, Width];
 
 		public SeatingChart(double takenProbability)
 		{
 			Random random = new Random();
-			int hour = random.Next(10, 26) % 24;
-			int minute = random.Next(0, 12) * 5;
-			string suffix = hour >= 12 ? "PM" : "AM";
-			time = $"{hour % 12}:{minute:N2} {suffix}";
+			hour = random.Next(10, 26) % 24;
+			minute = random.Next(0, 12) * 5;
+			DateTime dateTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, hour, minute, 0);
+			time = dateTime.ToString("t", CultureInfo.CreateSpecificCulture("en-US"));
 
 			for (int i = 0; i < Height; i++)
 			{
@@ -33,6 +33,24 @@ namespace Theater_Application
 			}
 		}
 	}
+
+	public struct SeatIndex
+	{
+		public int i;
+		public int j;
+
+		public SeatIndex(int i, int j)
+		{
+			this.i = i;
+			this.j = j;
+		}
+
+		public override string ToString()
+		{
+			return $"{i+1}{(char)('A' + j)}";
+		}
+	}
+
 
 	public enum SeatStatus
 	{

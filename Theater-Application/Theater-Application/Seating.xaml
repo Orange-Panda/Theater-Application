@@ -28,7 +28,7 @@
 		</StackLayout>
 
 		<!--Time Selection-->
-		<StackLayout Grid.Row="2" Orientation="Horizontal"  HorizontalOptions="Center" Spacing="10">
+		<StackLayout Grid.Row="2" x:Name="TimeSelect" Orientation="Horizontal"  HorizontalOptions="Center" Spacing="10">
 			
 		</StackLayout>
 		
