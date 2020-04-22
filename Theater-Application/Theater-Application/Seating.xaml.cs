@@ -153,8 +153,8 @@ namespace Theater_Application
 					switch (chart.seats[i, j].seatStatus)
 					{
 						case SeatStatus.Available: color = Color.White; break;
-						case SeatStatus.Reserved: color = Color.Gray; break;
-						case SeatStatus.Taken: color = new Color(.125, .125, .125); break;
+						case SeatStatus.Reserved: color = Color.Firebrick; break;
+						case SeatStatus.Taken: color =  Color.Gray; break;
 						case SeatStatus.Null: color = new Color(0, 0, 0, 0); break;
 						default: color = Color.White; break;
 					}

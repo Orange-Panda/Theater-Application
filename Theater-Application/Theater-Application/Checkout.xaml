@@ -13,9 +13,8 @@
 				<RowDefinition Height="auto"/>
 				<RowDefinition Height="64"/>
 				<RowDefinition Height="auto"/>
-				<RowDefinition Height=".5*"/>
 				<RowDefinition Height="auto"/>
-				<RowDefinition Height="*"/>
+				<RowDefinition Height="32"/>
 			</Grid.RowDefinitions>
 
 			<!---Background elements-->
@@ -44,41 +43,23 @@
 
 			<!--Payment information-->
 			<Label Grid.Row="2" Style="{StaticResource Title}" Text="PAYMENT INFORMATION"/>
-			<StackLayout Orientation="Vertical" Grid.Row="3" BackgroundColor="#A0000000">
-				<StackLayout Orientation="Horizontal" Margin="3">
-					<StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-						<Label Text="NAME" HorizontalOptions="Center" TextColor="Firebrick"/>
-						<Entry x:Name="Name"  FontSize="15"/>
-					</StackLayout>
-					<StackLayout Orientation="Vertical" >
-						<Label Text="CARD-ID" TextColor="Firebrick"/>
-						<Picker x:Name="CardID" FontSize="15"/>
-					</StackLayout>
+			<StackLayout Orientation="Vertical" Grid.Row="3" BackgroundColor="#A0000000" Padding="20">
+				<Label Style="{StaticResource Header}" Text="Cardholder Name"/>
+				<Entry Style="{StaticResource Body}" x:Name="CardName"/>
+				<Label Style="{StaticResource Header}" Text="Card Number" TextColor="Firebrick"/>
+				<Entry Style="{StaticResource Body}" x:Name="CardNum"/>
+				<StackLayout Orientation="Horizontal" Spacing="50">
+					<Label Style="{StaticResource Header}" Text="CVV" WidthRequest="60"/>
+					<Label Style="{StaticResource Header}" Text="EXP. DATE"/>
 				</StackLayout>
-				<StackLayout Orientation="Vertical" Margin="3">
-					<StackLayout Orientation="Horizontal">
-						<StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-							<Label Text="Card Number" TextColor="Firebrick"/>
-							<Entry x:Name="CardNum"  FontSize="15"/>
-						</StackLayout>
-						<StackLayout Orientation="Vertical" >
-							<Label Text="Email" HorizontalOptions="Center" TextColor="Firebrick"/>
-							<Entry x:Name="Email" FontSize="15"/>
-						</StackLayout>
-					</StackLayout>
+				<StackLayout Orientation="Horizontal" Spacing="50">
+					<Entry Style="{StaticResource Body}" x:Name="CVV" WidthRequest="60"/>
+					<Entry Style="{StaticResource Body}" x:Name="Expire" Placeholder="MM/YYYY" PlaceholderColor="Gray"/>
 				</StackLayout>
-				<StackLayout Orientation="Horizontal" Margin="3">
-					<StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-						<Label Text="EXP. DATE" TextColor="Firebrick"/>
-						<Entry x:Name="Expire" FontSize="15"/>
-					</StackLayout>
-					<StackLayout Orientation="Vertical">
-						<Label Text="CVV" TextColor="Firebrick"/>
-						<Entry x:Name="CVV" FontSize="15"/>
-					</StackLayout>
-				</StackLayout>
+				<Label Style="{StaticResource Header}" Text="Email"/>
+				<Entry Style="{StaticResource Body}" x:Name="Email"/>
 			</StackLayout>
-			
+
 			<!--Confirm-->
 			<Button Style="{StaticResource Button}" Clicked ="Button_Clicked" Text="Reserve Ticket" Grid.Row="5"/>
 		</Grid>

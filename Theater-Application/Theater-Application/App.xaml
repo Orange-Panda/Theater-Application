@@ -52,6 +52,7 @@
 			<Setter Property="TitleColor" Value="OrangeRed"/>
 			<Setter Property="TextColor" Value="White"/>
 			<Setter Property="FontSize" Value="12"/>
+			<Setter Property="FontAttributes" Value="Bold"/>
 		</Style> 
 		<!--Definitions for the seat selection page-->
 		<Style x:Key="Seat Text" TargetType="Label">

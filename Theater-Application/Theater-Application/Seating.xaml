@@ -34,11 +34,11 @@
 		
 		<!--Key-->
 		<StackLayout Grid.Row="3" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Padding="20,5" Spacing="10">
-			<Frame Padding="0" WidthRequest="40" HeightRequest="24"/>
+			<Frame BackgroundColor="Firebrick" Padding="0" WidthRequest="40" HeightRequest="24"/>
+			<Label Style="{StaticResource Seat Text}" Text="Reserved" VerticalTextAlignment="Center"/>
+			<Frame BackgroundColor="White"  Padding="0" WidthRequest="40" HeightRequest="24"/>
 			<Label Style="{StaticResource Seat Text}" Text="Available" VerticalTextAlignment="Center"/>
 			<Frame BackgroundColor="Gray" Padding="0" WidthRequest="40" HeightRequest="24"/>
-			<Label Style="{StaticResource Seat Text}" Text="Reserved" VerticalTextAlignment="Center"/>
-			<Frame BackgroundColor="#FF202020" Padding="0" WidthRequest="40" HeightRequest="24"/>
 			<Label Style="{StaticResource Seat Text}" Text="Unavailable" VerticalTextAlignment="Center"/>
 		</StackLayout>
 		
